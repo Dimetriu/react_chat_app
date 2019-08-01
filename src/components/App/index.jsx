@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import '../../css/App.css';
 
-function App() {
+export default function App() {
   return (
     <main className="App">
-      <p>Yay!</p>
+      <Suspense fallback={loader}>
+        <Dashboard />
+      </Suspense>
     </main>
   );
 }
 
-export default App;
+const loader = <p>Loading...</p>;
+
+const Dashboard = lazy(() => import('../Dashboard'));
