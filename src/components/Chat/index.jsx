@@ -12,7 +12,13 @@ export default function Chat() {
     <>
       <section className={classes.flex}>
         <Suspense fallback={topicsWindowLoader}>
-          <TopicsWindow variant={classes.topicsWindow} />
+          <Window variant={classes.topicsWindow}>
+            topics window
+          </Window>
+
+          <Window variant={classes.chatWindow}>
+            chat window
+          </Window>
         </Suspense>
         <div className={classes.chatWindow}>
 
@@ -30,4 +36,4 @@ export default function Chat() {
 const topicsWindowLoader = <Facebook />;
 
 // COMPONENTS
-const TopicsWindow = lazy(() => import('../Chat/TopicsWindow'));
+const Window = lazy(() => import('./Window'));

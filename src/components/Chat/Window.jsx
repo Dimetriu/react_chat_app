@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function TopicsWindow({ variant }) {
+export default function Window({ children, variant }) {
   return (
     <div className={variant}>
-      topics window
+      {children}
     </div>
   );
 }
