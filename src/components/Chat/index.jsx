@@ -1,26 +1,25 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useContext } from 'react';
+import { ThemeContext } from '../../ThemeContext';
 import { Facebook } from 'react-content-loader';
 // import List from '@material-ui/core/List';
 // import ListItem from '@material-ui/core/ListItem';
 // import ListItemText from '@material-ui/core/ListItemText';
 
-export default function Chat({ 
-  flex,
-  topicsWindow,
-  chatWindow, 
-}) {
+export default function Chat() {
+  const classes = useContext(ThemeContext);
+
   return (
     <>
-      <section className={flex}>
+      <section className={classes.flex}>
         <Suspense fallback={topicsWindowLoader}>
-          <TopicsWindow />
+          <TopicsWindow variant={classes.topicsWindow} />
         </Suspense>
-        <div className={chatWindow}>
+        <div className={classes.chatWindow}>
 
         </div>
       </section>
 
-      <section className={flex}>
+      <section className={classes.flex}>
         
       </section>
     </>

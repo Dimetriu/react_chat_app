@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function TopicsWindow() {
+export default function TopicsWindow({ variant }) {
   return (
-    <div className="">
+    <div className={variant}>
       topics window
     </div>
   );
