@@ -3,10 +3,20 @@ import ContentLoader, { Facebook } from 'react-content-loader';
 
 export const DashboardLoader = () => <Facebook />;
 
-export const MyLoader = () => (
-  <ContentLoader>
-    <rect x="0" y="0" rx="5" ry="5" width="70" height="70" />
-    <rect x="80" y="17" rx="4" ry="4" width="300" height="13" />
-    <rect x="80" y="40" rx="3" ry="3" width="250" height="10" />
-  </ContentLoader>
-);
+export const AppLoader = ({ variant }) => {
+  return (
+    <div className={variant}>
+      <ContentLoader
+        height={200}
+        width={500}
+        speed={2}
+        primaryColor="#f3f3f3"
+        secondaryColor="#ecebeb"
+      >
+        <rect x="0" y="0" rx="4" ry="4" width="500" height="20" />
+        <rect x="100" y="25" rx="4" ry="4" width="300" height="15" />
+        <rect x="0" y="55" rx="4" ry="4" width="500" height="75" />
+      </ContentLoader>
+    </div>
+  );
+}
