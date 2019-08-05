@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
     borderRight: '1px solid grey'
   },
   chatWindow: {
+    flexFlow: 'column wrap',
     width: '70%',
     height: '300px'
   },
