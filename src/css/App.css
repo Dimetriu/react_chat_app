@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
+.customLoader {
+  margin: 10vh;
+  /* display: flex; */
+}
